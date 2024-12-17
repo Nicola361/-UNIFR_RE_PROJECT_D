@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensures html and body elements take full height of viewport */
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the courses page */
+.courses-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+
+  /* Navigation bar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #96071a;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+
+    /* Logo image inside bar */
+    .logo img {
+      max-height: 50px;
+    }
+
+    /* Styling for logout button in navigation bar */
+    .logout button {
+      background-color: #cd0101;
+      color: #f7f0e8;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+
+      /* Change button style when hovered */
+      &:hover {
+        background-color: #d2cccb;
+        color: rgb(113, 3, 3);
+        /* Weiß für Hover-Text */
+      }
+    }
+  }
+
+  /* Main content section */
+  .content {
+    margin-top: 100px;
+    padding: 20px;
+
+    /* Styling for the main heading */
+    h1 {
+      text-align: center;
+      color: #a10a11;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      /* Styling for the table headers */
+      th {
+        background-color: #f0f0f0;
+        color: #000;
+        padding: 10px;
+      }
+
+      /* Styling for table cells */
+      td,
+      th {
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      /* Zebra-striping effect for even rows */
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      /* Hover effect for rows */
+      tr:hover {
+        background-color: #b94c4c;
+      }
+    }
+  }
+
+  /* Quicklinks at the bottom of the page */
+  .quicklinks {
+    background-color: rgba(167, 22, 22, 0.9);
+    padding: 10px 20px;
+
+    .menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+
+        /* Hover and active state for menu items */
+        &.active,
+        &:hover {
+          background-color: #0966f1; /* Blue background on hover */
+        }
+      }
+    }
+  }
+}

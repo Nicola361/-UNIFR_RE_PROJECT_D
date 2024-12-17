@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="./style.scss">
+<title>Grade</title>
+</head>
+<body aurelia-app="grade">
+<div class="page-container">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="src/views/login/logo.png" alt="UniFr Logo" />
+    </div>
+    <div class="logout">
+      <button click.trigger="logout()">Log Out</button>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1>Your Grades</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Course Name</th>
+          <th>ETCS</th>
+          <th>Grade</th>
+          <th>Passed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Decision Support II</td><td>5</td><td>5</td><td>Yes</td></tr>
+        <tr><td>2</td><td>Advanced Algorithmic</td><td>6</td><td>4</td><td>Yes</td></tr>
+        <tr><td>3</td><td>Mathematics III</td><td>6</td><td>4.5</td><td>Yes</td></tr>
+        <tr class="failed"><td>4</td><td>Advanced Statistics</td><td>4.5</td><td>2.5</td><td>No</td></tr>
+        <tr class="failed"><td>5</td><td>Business Informatics II</td><td>6</td><td>3.5</td><td>No</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="quicklinks">
+    <ul class="menu">
+      <li><a href="/exams">Exams</a></li>
+      <li><a href="/grade">Grade</a></li>
+      <li><a href="/courses">Courses</a></li>
+      <li><a href="/dashboard">Homepage</a></li>
+    </ul>
+  </div>
+</div>
+<script src="/dist/main.js"></script>
+</body>
+</html>

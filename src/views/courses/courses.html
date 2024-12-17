@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="./courses.scss">
+<title>Courses</title>
+</head>
+<body aurelia-app="courses">
+<div class="courses-container">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="src/views/login/logo.png" alt="UniFr Logo" />
+    </div>
+    <div class="logout">
+      <button click.trigger="logout()">Log Out</button>
+    </div>
+  </nav>
+
+    <!-- Content area of the courses page -->
+    <div class="content">
+      <h1>Wirtschaftsinformatik Stundenplan</h1>
+      <table>
+        <thead>
+          <!-- Table header row with column titles -->
+          <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00 - 09:30</td>
+            <td>Mathematics I</td>
+            <td>Business Informatics I</td>
+            <td>Statistics</td>
+            <td>Mathematics I</td>
+            <td>Business Informatics I</td>
+          </tr>
+          <tr>
+            <td>09:45 - 11:15</td>
+            <td>Algorithmic</td>
+            <td>Decision Support I</td>
+            <td>Algorithmic</td>
+            <td>Decision Support I</td>
+            <td>Statistics</td>
+          </tr>
+          <tr>
+            <td>11:30 - 13:00</td>
+            <td>Economics</td>
+            <td>Project Management</td>
+            <td>Economics</td>
+            <td>Project Management</td>
+            <td>Economics</td>
+          </tr>
+          <tr>
+            <td>13:15 - 14:45</td>
+            <td>Database Systems</td>
+            <td>Software Engineering</td>
+            <td>Database Systems</td>
+            <td>Software Engineering</td>
+            <td>Database Systems</td>
+          </tr>
+          <tr>
+            <td>15:00 - 16:30</td>
+            <td>Marketing</td>
+            <td>Information Systems</td>
+            <td>Marketing</td>
+            <td>Information Systems</td>
+            <td>Marketing</td>
+          </tr>
+          <tr>
+            <td>16:45 - 18:15</td>
+            <td>Business Law</td>
+            <td>Business Law</td>
+            <td>Business Law</td>
+            <td>Business Law</td>
+            <td>Business Law</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Quicklinks at the bottom of the page -->
+    <div class="quicklinks">
+      <ul class="menu">
+        <li><a href="/exams">Exams</a></li>
+        <li><a href="/grade">Grade</a></li>
+        <li><a href="/courses">Courses</a></li>
+        <li><a href="/dashboard">Homepage</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="/dist/main.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="./dashboard.scss">
+<title>Dashboard</title>
+</head>
+<body aurelia-app="dashboard">
+<div class="dashboard-container">
+  <div class="welcome-box">
+    <h1>Welcome <strong><u>Nicola</u></strong> to your UniFr Account</h1>
+  </div>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="src/views/login/logo.png" alt="UniFr Logo" />
+    </div>
+    <div class="logout">
+      <button click.trigger="logout()">Log Out</button>
+    </div>
+  </nav>
+
+  <div class="content">
+    <div class="dashboard-content">
+      <div class="notifications">
+        <ul>
+          <li>20.12.25 Register for the exam <span class="dot">•</span></li>
+          <li>Shell slows down the evolution of turtles <span class="dot">•</span></li>
+          <li>Interdisciplinary research project performing AI examines artificial intelligence as a cultural phenomenon <span class="dot">•</span></li>
+          <li>Fribourg promoter of human rights receives honorary doctorate <span class="dot">•</span></li>
+        </ul>
+        <button class="view-more">View More</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="quicklinks">
+    <ul class="menu">
+      <li><a href="/exams">Exams</a></li>
+      <li><a href="/grade">Grade</a></li>
+      <li><a href="/courses">Courses</a></li>
+    </ul>
+  </div>
+</div>
+<script src="/dist/main.js"></script>
+</body>
+</html>

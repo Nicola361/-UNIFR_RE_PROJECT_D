@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure html and body take full height and apply a consistent font style */
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Main container for the dashboard page */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Set background image for page with fixed positioning and cover the entire container */
+  background: url('fribourg_skyline.png') no-repeat center center fixed;
+  background-size: cover;
+
+  /* Welcome message box at the top */
+  .welcome-box {
+    text-align: center;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 0; /* Move it to the top */
+  }
+
+  /* Styling for the navigation bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(75, 75, 75, 0.9);
+    padding: 10px 20px;
+    width: 100%;
+    z-index: 100;
+
+    /* Logo styling within the navbar */
+    .logo img {
+      max-height: 75px;
+    }
+
+    /* Styling for the logout button */
+    .logout button {
+      background-color: #007bff; /* Blue background */
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+
+      /* Hover effect for logout button */
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+
+  /* Main content area below the fixed navbar */
+  .content {
+    margin-top: 20px;
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Flex container for the dashboard content */
+  .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Styling for the notifications box */
+    .notifications {
+      background: #e9ecef;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      text-align: center;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+
+        li {
+          background: white;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-weight: bold; /* Make notifications bold */
+
+          .dot {
+            color: #007bff;
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .view-more {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+
+  /* Quicklinks at the bottom of the page */
+  .quicklinks {
+    background-color: rgba(75, 75, 75, 0.9);
+    padding: 10px 20px;
+
+    .menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+
+        /* Hover and active state for menu items */
+        &.active,
+        &:hover {
+          background-color: #007bff; /* Blue background on hover */
+        }
+      }
+    }
+  }
+}

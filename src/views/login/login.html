@@ -1,0 +1,30 @@
+<template>
+    <require from="./login.scss"></require>
+    
+    <div class="login-container">
+      <div class="login-box">
+        <h2>Sign in</h2>
+        <img src="/src/views/login/logo.png" />
+        <p>Log in to your Uni-Fribourg Account</p>
+        <form submit.trigger="validateUser($event)">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required>
+          </div>
+          <button type="submit">Sign in</button>
+        </form>
+        <div class="links">
+          <a href="#">If you don't have an Account yet? Register here</a>
+        </div>
+        <div class="buttons">
+          <button class="student-btn" click.trigger="login('student')">Student</button>
+          <button class="professor-btn" click.trigger="login('professor')">Professor</button>
+        </div>
+      </div>
+    </div>
+  </template>
+  
